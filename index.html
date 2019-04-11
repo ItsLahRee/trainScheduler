@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Title -->
+    <title>Train Scheduler</title>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Jumbotron style -->
+    <style>
+        .jumbotron {
+            background-color: rgb(100, 54, 54);
+            color: white;
+            font-size: 65%;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<br>
+<!-- Jumbotron -->
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div>
+                <!-- USE this as Bkgrnd photo...<img src="https://az616578.vo.msecnd.net/files/2016/02/27/6359219226453491021470707808_train.jpg" width="843", height="250px" class="img-fluid" alt="Responsive image"> -->
+                <h1 class="text-center">Train Scheduler</h1>
+                <p1 class="text-center">Choo. Choo. Chee. Chee.</p1>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <!-- Display, Train's Added -->
+
+    <!-- Grid #2, Add Train -->
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Train Schedule</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover" id="train-table">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th class="text-center">Frequency</th>
+                            <th class="text-center">Next Arrival</th>
+                            <th class="text-center">Minutes Away</th>
+                            <th class="text-center">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="train-table-rows">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container class">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Add New Train</h3>
+        <div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label>Train Name</label>
+                <input type="text" class="form-control form-field" id="train-name">
+              </div>
+              <div class="form-group">
+                <label>Destination</label>
+                <input type="text" class="form-control form-field" id="destination">
+              </div>
+              <div class="form-group">
+                <label>First Train Time: HH:mm - military time</label>
+                <input type="text" class="form-control form-field" id="first-train">
+              </div>
+              <div class="form-group">
+                <label>Frequency (min)</label>
+                <input type="text" class="form-control form-field" id="frequency">
+              </div>
+
+              <button type="submit" class="btn btn-default" id="submit">Add Train</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <!-- Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg=" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+  </script>
+  <!-- logic.js source -->
+  <script type="text/javascript" src="trainScheduler/logic.js"></script>
+</body>
+
+</html>
