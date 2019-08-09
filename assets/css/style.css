@@ -1,0 +1,8 @@
+/*Jumbotron style*/
+
+    .jumbotron {
+        background-color: rgb(100, 54, 54);
+        color: white;
+        font-size: 65%;
+        text-align: center;
+    }
