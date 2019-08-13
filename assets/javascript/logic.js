@@ -12,7 +12,7 @@ const firebaseConfig = {
   
   var trainData = firebase.database();
   
-  // 2. Button for adding trains
+  // Button for adding trains
   $("#addTrainBtn").on("click", function(){
    
     // Grabs user input
@@ -40,5 +40,39 @@ const firebaseConfig = {
     return false;
     
   });
+  
+  //update schedule when train is added
+database.ref().on("child_added", function (childSnapshot) {
+
+  var row = new $('<tr>');
+
+  // get frequency from new train
+  var frequency = childSnapshot.val().freq;
+
+  // get first train time
+  var first = childSnapshot.val().firstTime;
+
+  // set first time adjusted
+  var firstTime = moment(first, "HH:mm").subtract(1, "years");
+
+  // Difference
+  var difference = moment().diff(moment(firstTime), "minutes") % frequency;
+
+  // Minutes left till arrival
+  var minutes = frequency - difference;
+
+  // Next train arrival 
+  var nextTrain = moment().add(minutes, "minutes").format("hh:mm a");
+
+  // Add data to the new row
+  row.append($('<td>').text(childSnapshot.val().trainName));
+  row.append($('<td>').text(childSnapshot.val().destination));
+  row.append($('<td>').text(childSnapshot.val().freq));
+  row.append($('<td>').text(nextTrain));
+  row.append($('<td>').text(minutes));
+
+  // Add row to train table
+  $('#trainList').append(row);
+});
 
   
