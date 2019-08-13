@@ -1,4 +1,4 @@
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyC5ieIalTdQcj2oIWg6gqTosEhjQGMzY3A",
   authDomain: "trianscheduler.firebaseapp.com",
   databaseURL: "https://trianscheduler.firebaseio.com",
@@ -21,7 +21,22 @@ var firebaseConfig = {
     var firstTrain = moment($("#firstTrainInput").val().trim(), "HH:mm").subtract(10, "years").format("X"); 
     var frequency = $("#frequencyInput").val().trim();
     
-    console.log(firstTrain);
+    var newTrain = {
+      name: trainName,
+      destination: trainDestination,
+      firstTrain: firstTrain,
+      frequency: frequency
+    }
+
+    trainData.ref().push(newTrain);
+
+    alert("Train Added!");
+
+    $("trainNameInput").val("");
+    $("trainDestination").val("");
+    $("firstTrain").val("");
+    $("frequency").val("");
+    
     return false;
     
   });
