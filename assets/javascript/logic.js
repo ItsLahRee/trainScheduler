@@ -1,5 +1,6 @@
 //PSEUDOCODE
 
+
 // Steps to complete:
 
 // 1. Initialize Firebase
@@ -10,15 +11,15 @@
 // 5. Calculate Total billed
 
 // 1. Initialize Firebase
-
-  var config = {
-    apiKey: "AIzaSyC5ieIalTdQcj2oIWg6gqTosEhjQGMzY3A",
-    authDomain: "trainschedule-bb31d.firebaseapp.com",
-    databaseURL: "https://trainschedule-bb31d.firebaseio.com",
-    projectId: "trainschedule-bb31d",
-    storageBucket: "trainschedule-bb31d.appspot.com",
-    messagingSenderId: "235261451347"
-  };
+var firebaseConfig = {
+  apiKey: "AIzaSyC5ieIalTdQcj2oIWg6gqTosEhjQGMzY3A",
+  authDomain: "trianscheduler.firebaseapp.com",
+  databaseURL: "https://trianscheduler.firebaseio.com",
+  projectId: "trianscheduler",
+  storageBucket: "trianscheduler.appspot.com",
+  messagingSenderId: "451911483093",
+  appId: "1:451911483093:web:aa9d6875300e3d28"
+};
  
   firebase.initializeApp(config);
   
