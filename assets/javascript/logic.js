@@ -75,4 +75,6 @@ database.ref().on("child_added", function (childSnapshot) {
   $('#trainList').append(row);
 });
 
+//BUGS TO FIX: error loading javascript, and firebase link.
+
   
