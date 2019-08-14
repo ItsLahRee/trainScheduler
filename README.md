@@ -1,7 +1,27 @@
+# Train Scheduler
 
-#Train Scheduler (Basic - Recommended)
-##d Firebase Assignment 
+Application provides up-to-date information about various trains their arrival times, and how many minutes remain untill they arrive at their station.
 
+# Instillation
+
+Deployed Link:  https://itslahree.github.io/trainScheduler/ 
+
+## Usage
+
+Firebase, HTML, CSS, Bootstrap, JQuery, Javascript 
+
+## Contributing
+
+If you have something interesting to contribute, send me a pull request!
+
+## Liscence
+
+ItsLahRee | 2019
+
+
+
+=======================================================================================
+#Train Scheduler | Firebase Assignment
 
 ### Overview
 
